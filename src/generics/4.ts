@@ -3,18 +3,17 @@ type MyUser = {
     surname: string;
     email: string;
     password: string;
-  }
-  
-  function createOrUpdateUser(initialValues: Partial<MyUser>) {
+}
+
+function createOrUpdateUser(initialValues: Partial<MyUser>): void {
     if (initialValues.email && initialValues.password) {
-      console.log('Email та пароль користувача оновлені');
+        console.log('Email та пароль користувача оновлені');
     } else {
-      console.log('Не вдалося оновити користувача: недостатньо даних');
+        console.log('Не вдалося оновити користувача: недостатньо даних');
     }
-  }
-  
-  createOrUpdateUser({ 
+}
+
+createOrUpdateUser({ 
     email: 'user@mail.com', 
     password: 'password123' 
-  });
-  
+});
